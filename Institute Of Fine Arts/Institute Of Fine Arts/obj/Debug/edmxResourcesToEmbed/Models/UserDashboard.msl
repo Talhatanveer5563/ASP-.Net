@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IFAModelStoreContainer" CdmEntityContainer="IFAEntities">
+    <EntitySetMapping Name="Staff_pro">
+      <EntityTypeMapping TypeName="IFAModel.Staff_pro">
+        <MappingFragment StoreEntitySet="Staff_pro">
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_img" ColumnName="s_img" />
+          <ScalarProperty Name="s_firstname" ColumnName="s_firstname" />
+          <ScalarProperty Name="s_lastname" ColumnName="s_lastname" />
+          <ScalarProperty Name="s_class" ColumnName="s_class" />
+          <ScalarProperty Name="s_subject" ColumnName="s_subject" />
+          <ScalarProperty Name="s_sdate" ColumnName="s_sdate" />
+          <ScalarProperty Name="s_edate" ColumnName="s_edate" />
+          <ScalarProperty Name="s_remarks" ColumnName="s_remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IFAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Staff_pro">
+    <Key>
+      <PropertyRef Name="s_id" />
+    </Key>
+    <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="s_firstname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="s_lastname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="s_class" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="s_subject" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="s_sdate" Type="DateTime" Precision="0" />
+    <Property Name="s_edate" Type="DateTime" Precision="0" />
+    <Property Name="s_remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="IFAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Staff_pro" EntityType="Self.Staff_pro" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,105 @@
+﻿
+@{ ViewBag.Title = "homesection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- ======= Hero Section ======= -->
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+    <div class="ws_images">
+        <ul>
+            <li><img src="~/Content/data1/images/nuestrasraises_fb_3.jpg" alt="Nuestras-Raises_FB_3" title="Nuestras-Raises_FB_3" id="wows1_0" /></li>
+            <li><img src="~/Content/data1/images/pexelsannatarazevich6146655.jpg" alt="pexels-anna-tarazevich-6146655" title="pexels-anna-tarazevich-6146655" id="wows1_1" /></li>
+            <li><img src="~/Content/data1/images/shgddlm_fbnologo.jpg" alt="jquery carousel" title="SHG-DDLM_FB-no-logo" id="wows1_2" /></a></li>
+            <li><img src="~/Content/data1/images/shutterstock_1744638788.jpg" alt="shutterstock_1744638788" title="shutterstock_1744638788" id="wows1_3" /></li>
+        </ul>
+    </div>
+    <div class="ws_bullets">
+        <div>
+            <a href="#" title="Raices Dance"><span><img src="~/Content/data1/tooltips/nuestrasraises_fb_3.jpg" alt="Nuestras-Raises_FB_3" />1</span></a>
+            <a href="#" title="Battle of Arts"><span><img src="~/Content/data1/tooltips/pexelsannatarazevich6146655.jpg" alt="pexels-anna-tarazevich-6146655" />2</span></a>
+            <a href="#" title="Papel Picado Work Shop"><span><img src="~/Content/data1/tooltips/shgddlm_fbnologo.jpg" alt="SHG-DDLM_FB-no-logo" />3</span></a>
+            <a href="#" title="Exhibition"><span><img src="~/Content/data1/tooltips/shutterstock_1744638788.jpg" alt="shutterstock_1744638788" />4</span></a>
+
+            
+        </div>
+    
+        <div class="ws_shadow"></div>
+    </div>
+    </div>
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+<!---content-->
+
+<main id="main">
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="~/Content/assets/img/Events/SHG-DDLM_FB-no-logo.jpg" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Papel Picado Workshop</a></h5>
+                            <p class="fst-italic text-center">Friday, November 26th at 7:00 pm</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="~/Content/assets/img/Events/Nuestras-Raises_FB_3.jpg" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Raices Dance</a></h5>
+                            <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="~/Content/assets/img/Events/shutterstock_1744638788.jpg" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Exhibition</a></h5>
+                            <p class="fst-italic text-center">Saturday, December 25th at 7:00 pm</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="~/Content/assets/img/Events/pexels-anna-tarazevich-6146655.jpg" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="">Battle of Arts</a></h5>
+                            <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Events Section -->
+
+</main><!-- End #main -->
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+
+}

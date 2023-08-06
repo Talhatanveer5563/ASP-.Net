@@ -1,0 +1,91 @@
+﻿@model Institute_Of_Fine_Arts.Models.Staff_pro
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!-- ======= Breadcrumbs ======= -->
+<div class="breadcrumbs" data-aos="fade-in">
+    <div class="container-fluid">
+        <h4>Details</h4>
+    </div>
+</div><!-- End Breadcrumbs -->
+<br />
+
+
+<div class="container" style="width:30% " data-aos="fade-up">
+ 
+    <dl class="d-lg-table-row">
+        <dt>
+            Image:
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(Session["imgPath"].ToString())" width="150px" height="150px" />
+        </dd>
+        <br />
+        <dt>
+            First Name:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_firstname)
+        </dd>
+        <br />
+        <dt>
+            Last Name:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_lastname)
+        </dd>
+        <br />
+        <dt>
+            Class:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_class)
+        </dd>
+        <br />
+        <dt>
+            Subject:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_subject)
+        </dd>
+        <br />
+        <dt>
+            Starting Date:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_sdate)
+        </dd>
+        <br />
+        <dt>
+            Ending Date:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_edate)
+        </dd>
+        <br />
+        <dt>
+            Remarks:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_remarks)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Update", "Edit", new { id = Model.s_id }) |
+    @Html.ActionLink("Back to List", "List")
+</p>

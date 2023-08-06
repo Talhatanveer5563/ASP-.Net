@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "UserDasboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+@if (Session["uname"] != null)
+{
+    <h3>Hi @Session["uname"].ToString()!</h3>
+    <h3>Welcome to IFA</h3>
+}
+else
+{
+    Response.Redirect("~/Home/login");
+}
+<br />
+<br />
+<br />
+<br />
+<div style="text-align:right; margin-right:10px;">
+    @Html.ActionLink("Logout", "logout", "Home")<br />
+    @Html.ActionLink("Staff List", "List", "Home")
+</div>

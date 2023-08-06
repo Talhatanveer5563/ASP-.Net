@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IFAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Staff_pro">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="s_img" Type="nvarchar" MaxLength="500" />
+          <Property Name="s_firstname" Type="nvarchar" MaxLength="30" />
+          <Property Name="s_lastname" Type="nvarchar" MaxLength="30" />
+          <Property Name="s_class" Type="nvarchar" MaxLength="10" />
+          <Property Name="s_subject" Type="nvarchar" MaxLength="20" />
+          <Property Name="s_sdate" Type="date" />
+          <Property Name="s_edate" Type="date" />
+          <Property Name="s_remarks" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="IFAModelStoreContainer">
+          <EntitySet Name="Staff_pro" EntityType="Self.Staff_pro" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IFAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Staff_pro">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s_img" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="s_firstname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="s_lastname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="s_class" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="s_subject" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="s_sdate" Type="DateTime" Precision="0" />
+          <Property Name="s_edate" Type="DateTime" Precision="0" />
+          <Property Name="s_remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="IFAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Staff_pro" EntityType="Self.Staff_pro" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IFAModelStoreContainer" CdmEntityContainer="IFAEntities">
+          <EntitySetMapping Name="Staff_pro">
+            <EntityTypeMapping TypeName="IFAModel.Staff_pro">
+              <MappingFragment StoreEntitySet="Staff_pro">
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="s_img" ColumnName="s_img" />
+                <ScalarProperty Name="s_firstname" ColumnName="s_firstname" />
+                <ScalarProperty Name="s_lastname" ColumnName="s_lastname" />
+                <ScalarProperty Name="s_class" ColumnName="s_class" />
+                <ScalarProperty Name="s_subject" ColumnName="s_subject" />
+                <ScalarProperty Name="s_sdate" ColumnName="s_sdate" />
+                <ScalarProperty Name="s_edate" ColumnName="s_edate" />
+                <ScalarProperty Name="s_remarks" ColumnName="s_remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

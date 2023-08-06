@@ -1,0 +1,87 @@
+﻿@model Institute_Of_Fine_Arts.Models.Registration
+
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+        <div class="container-fluid">
+            <h1>Register Yourself</h1>
+        </div>
+    </div>
+    <br />
+    <!-- End Breadcrumbs -->
+
+
+    <div class="container" style="width:30%">
+        <div class="form-group">
+
+            <div class="col-md-10">
+                <input placeholder="Full Name"
+                       @Html.EditorFor(model => model.s_name, new { htmlAttributes = new { @class = "form-control" } })
+                       @Html.ValidationMessageFor(model => model.s_name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+
+            <div class="col-md-10">
+                <input placeholder="Email"
+                       @Html.EditorFor(model => model.s_email, new { htmlAttributes = new { @class = "form-control" } })
+                       @Html.ValidationMessageFor(model => model.s_email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+
+        <div class="form-group">
+
+            <div class="col-md-10">
+                <input placeholder="Password"
+                       @Html.EditorFor(model => model.s_Password, new { htmlAttributes = new { @class = "form-control" } })
+                       @Html.ValidationMessageFor(model => model.s_Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+
+            <div class="col-md-10">
+                <input placeholder="Confirm Password"
+                       @Html.EditorFor(model => model.s_Confirm_password, new { htmlAttributes = new { @class = "form-control" } })
+                       @Html.ValidationMessageFor(model => model.s_Confirm_password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.s_gender, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+
+                @Html.RadioButtonFor(Model => Model.s_gender, "Male") Male
+                @Html.RadioButtonFor(model => model.s_gender, "Femlae") Female
+            </div>
+        </div>
+        <br />
+        <div class="form-group-lg">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-success" />
+            </div>
+        </div>
+
+    </div>
+
+}
+
+
+<br />
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
